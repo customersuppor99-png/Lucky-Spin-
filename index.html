@@ -6,46 +6,49 @@
     <title>জনতা অনলাইন প্রেস ক্লাব - এক্সক্লুসিভ পোর্টাল</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
-        :root { --primary: #6366f1; --secondary: #a855f7; }
+        :root { --primary: #6366f1; --accent: #f59e0b; --danger: #ef4444; }
         body { font-family: 'Hind Siliguri', sans-serif; background: linear-gradient(135deg, #0f172a, #1e1b4b); color: #f8fafc; margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        .card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); padding: 40px; border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.1); max-width: 500px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.3); animation: fadeIn 0.8s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        h1 { text-align: center; background: linear-gradient(to right, #6366f1, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .alert-box { background: rgba(239, 68, 68, 0.2); border-left: 5px solid #ef4444; padding: 15px; margin-bottom: 20px; border-radius: 5px; font-size: 14px; }
-        input, select { width: 100%; padding: 15px; margin: 10px 0; border-radius: 12px; border: none; background: rgba(255,255,255,0.1); color: white; box-sizing: border-box; }
-        button { width: 100%; padding: 15px; border-radius: 12px; border: none; background: linear-gradient(45deg, var(--primary), var(--secondary)); color: white; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); padding: 30px; border-radius: 25px; border: 1px solid rgba(255, 255, 255, 0.1); max-width: 500px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        
+        .header-msg { background: rgba(245, 158, 11, 0.15); border: 1px solid var(--accent); padding: 15px; border-radius: 15px; margin-bottom: 20px; text-align: center; }
+        .header-msg h2 { color: var(--accent); margin: 0 0 10px 0; font-size: 20px; }
+        .header-msg p { font-size: 14px; line-height: 1.5; margin: 0; }
+
+        input, select { width: 100%; padding: 12px; margin: 8px 0; border-radius: 10px; border: none; background: rgba(255,255,255,0.08); color: white; }
+        button { width: 100%; padding: 14px; border-radius: 10px; border: none; background: linear-gradient(45deg, var(--primary), #a855f7); color: white; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+        
         #successView { display: none; text-align: center; }
-        .whatsapp-btn { display: inline-block; background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; margin-top: 20px; font-weight: bold; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { transform: scale(0.95); } 50% { transform: scale(1.05); } 100% { transform: scale(0.95); } }
+        .whatsapp-btn { display: inline-block; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; margin-top: 20px; font-weight: bold; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
     </style>
 </head>
 <body>
 
 <div class="card" id="formView">
-    <h1>🎁 বিশেষ ঘোষণা</h1>
-    <div class="alert-box">
-        ⚠️ <strong>সতর্কতা:</strong> পার্সেলটি অবশ্যই গ্রহণ করতে হবে। অন্যথায় নতুন ওয়েবসাইটে ইউজার পাসওয়ার্ড পাবেন না এবং কোনো কার্যক্রমে অংশগ্রহণ করতে পারবেন না।
+    <div class="header-msg">
+        <h2>📢 সম্মানিত প্রিয় সদস্য</h2>
+        <p>অনুগ্রহ করে আপনার পার্সেলটি দ্রুত গ্রহণ করুন। আমরা প্রত্যেক সদস্যকে বিনামূল্যে টি-শার্ট ও ইলেকট্রনিক্স উপকরণ প্রদান করছি। আপনার জন্য রাফেল ড্র-এর টিকিট বরাদ্দ করা হয়েছে। <strong>মনে রাখবেন: পার্সেল গ্রহণ না করলে আপনি নতুন ওয়েবসাইটে এক্সেস পাবেন না এবং কোনো কার্যক্রমেই অংশ নিতে পারবেন না।</strong> আপনার নিশ্চিত টি-শার্টটি পেতে এখনই নিচের তথ্যগুলো জমা দিন।</p>
     </div>
+
     <form id="dataForm">
         <input type="text" placeholder="আপনার নাম" required>
         <input type="tel" placeholder="মোবাইল নাম্বার" required>
         <input type="text" placeholder="জেলা ও উপজেলা" required>
         <select required>
-            <option value="" style="color:black">টি-শার্ট সাইজ</option>
+            <option value="" style="color:black">টি-শার্ট সাইজ নির্বাচন করুন</option>
             <option value="S" style="color:black">S</option>
             <option value="M" style="color:black">M</option>
             <option value="L" style="color:black">L</option>
             <option value="XL" style="color:black">XL</option>
         </select>
-        <button type="submit">তথ্য জমা দিন</button>
+        <button type="submit">তথ্য জমা দিন ও পার্সেল গ্রহণ নিশ্চিত করুন</button>
     </form>
 </div>
 
 <div class="card" id="successView">
-    <h1 style="color: #22c55e;">সফল হয়েছে!</h1>
-    <p>আপনার তথ্য সফলভাবে সংরক্ষিত হয়েছে।</p>
-    <p>এখন দ্রুত আপনার <strong>পার্সেলটি গ্রহণ করুন</strong> এবং বিষয়টি আমাদের হোয়াটসঅ্যাপে জানিয়ে দিন।</p>
-    <a href="https://wa.me/8801328627572?text=আমি%20আমার%20পার্সেলটি%20গ্রহণ%20করেছি%20এবং%20টি-শার্টের%20তথ্য%20জমা%20দিয়েছি।" class="whatsapp-btn">হোয়াটসঅ্যাপে জানান</a>
+    <h1 style="color: #22c55e;">ধন্যবাদ!</h1>
+    <p>আপনার তথ্য সফলভাবে জমা হয়েছে। এখন দ্রুত আপনার <strong>পার্সেলটি সংগ্রহ করুন</strong> এবং আমাদের হোয়াটসঅ্যাপে বিষয়টি নিশ্চিত করুন।</p>
+    <a href="https://wa.me/8801328627572?text=আমি%20আমার%20পার্সেলটি%20গ্রহণ%20করেছি%20এবং%20টি-শার্টের%20তথ্য%20জমা%20দিয়েছি।" class="whatsapp-btn">হোয়াটসঅ্যাপে যোগাযোগ করুন</a>
 </div>
 
 <script>
